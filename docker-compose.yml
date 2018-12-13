@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  planet-rebase-wiki-dash:
+    image: planet-rebase-wiki-dash
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 1234:1234

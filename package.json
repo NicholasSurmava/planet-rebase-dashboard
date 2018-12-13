@@ -1,0 +1,20 @@
+{
+  "name": "planet-rebase-wiki-dash",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nicholas Surmava <nicholas.surmava@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.10.3",
+    "parcel-plugin-json-url-loader": "^0.1.1"
+  },
+  "dependencies": {
+    "db": "^1.1.1",
+    "projects": "^1.6.1",
+    "src": "^1.1.2"
+  },
+  "scripts": {
+    "p:dev": "parcel src/index.html",
+    "p:prod": "parcel build src/index.html && http-server -c-1 dist"
+  }
+}
