@@ -5,6 +5,7 @@
   "author": "Nicholas Surmava <nicholas.surmava@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "http-server": "^0.11.1",
     "parcel-bundler": "^1.10.3",
     "parcel-plugin-json-url-loader": "^0.1.1"
   },
@@ -15,6 +16,7 @@
   },
   "scripts": {
     "p:dev": "parcel src/index.html",
-    "p:prod": "parcel build src/index.html && http-server -c-1 dist"
+    "p:prod": "parcel build src/index.html && http-server -c-1 dist",
+    "dev": "http-server -c-1 src"
   }
 }
