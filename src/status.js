@@ -1,5 +1,3 @@
-
-
 const file = require('./db/projects/projects.json');
 
 let interval = '5000';
@@ -19,11 +17,14 @@ function fetchProjects() {
         .then(data => {
             let str = JSON.stringify(data);
             document.getElementById('output').textContent = str;
+            console.log("Working!");
         })
         .catch(err => {
             let nm = err.name;
             let msg = err.message;
-            document.getElementById('output').textContent = "Uh oh... Something's borked.";
+            document.getElementById('output').textContent = `
+            Uh oh... Something's borked.
+            `;
             console.log(`CATCH: ${nm} ${msg}`);
         });
 }
