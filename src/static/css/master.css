@@ -31,6 +31,10 @@
     display: block;
 }
 
+.img-container {
+    margin-top: 100px;
+}
+
 .img-container img {
     max-height: 600px;
     max-width: 100%;

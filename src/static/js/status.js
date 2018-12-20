@@ -21,9 +21,9 @@ function fetchProjects() {
                 output += 
                 `
                 <div class="card-panel">
+                <span class="card-title"><a href="#!">Project Name: ${project.project_name}</a></span>
+                <a href="#!" class="secondary-content"><i class="material-icons">history</i></a>
                     <ul class="collection">
-                        <div><a href="#!" class="secondary-content"><i class="material-icons">history</i></a></div>
-                        <a href="#!" class="collection-item">Project Name: ${project.project_name}</a>
                         <li class="collection-item">Author: ${project.name}</li>
                         <li class="collection-item">Status: ${project.status}</li>
                         <li class="collection-item">Status Note: ${project.status_note}</li>
