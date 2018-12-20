@@ -1,4 +1,4 @@
-// const file = require('./db/projects/projects.json');
+// const file = require('../../db/projects/projects.json');
 const file = 'db/projects/projects.json';
 
 let interval = '5000';
@@ -23,12 +23,14 @@ function fetchProjects() {
                 <div class="card-panel">
                     <ul class="collection">
                         <div><a href="#!" class="secondary-content"><i class="material-icons">history</i></a></div>
-                        <a href="" class="collection-item">Project Name: ${project.project_name}</a>
+                        <a href="#!" class="collection-item">Project Name: ${project.project_name}</a>
                         <li class="collection-item">Author: ${project.name}</li>
                         <li class="collection-item">Status: ${project.status}</li>
                         <li class="collection-item">Status Note: ${project.status_note}</li>
                         <li class="collection-item">Requester: ${project.requester}</li>
-                        <li class="collection-item">Goal: ${project.goal}</li>
+                        <li class="collection-item">Goal: 
+                            <p>${project.goal}</p>
+                        </li>
                     </ul>
                 </div>
                 `;
@@ -53,11 +55,19 @@ setInterval(fetchProjects, interval);
 
 // Scroll the page every 100 miliseconds
 function pageScroll() {
+    console.log('Start Auto-Scroll');
     window.scrollBy(0,1);
-    scrolldelay = setTimeout(pageScroll,100);
+    scrollDelay = setTimeout(pageScroll,100);
 }
 
-pageScroll();
+function stop_scroll_down() {
+    clearInterval(scrollDelay);
+    console.log('Stop Auto-Scroll');
+}
+
+document.getElementById('start_scroll').addEventListener('click', pageScroll);
+document.getElementById('stop_scroll').addEventListener('click', stop_scroll_down);
+
 
 // Scroll back to top click event
 document.getElementById("btn-small").addEventListener('click', topFunction);
@@ -79,6 +89,15 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-// when the bottom is hit, auto scroll to top after a delay
 
-// When user moves the mouse, stop scrolling
+// Reveal config menu
+document.getElementById('config-btn').addEventListener('click', revealConfig);
+
+function revealConfig() {
+    let menu = document.getElementById('config-menu');
+    if (menu.style.display === 'none') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+}

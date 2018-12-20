@@ -21,18 +21,79 @@
             <header class="side-header col s3 left">
                 <h1>Planet Rebase Project Feed</h1>
                 <div class="links">
-                    <a href="">Link 1</a>
-                    <a href="">Link 2</a>
-                    <a href="">Link 3</a>
-                    <a href="">Link 4</a>
+                    <a href="#!">Link 1</a>
+                    <a href="#!">Link 2</a>
+                    <a href="#!">Link 3</a>
+                    <a href="#!">Link 4</a>
                 </div>
                 <div class="img-container">
                     <img src="https://source.unsplash.com/random/800x600" alt="img">
                 </div>
             </header>
+            <!-- config menu -->
+            <aside>
+                <a class="btn-floating btn-small waves-effect waves-light teal" id="config-btn"><i class="material-icons">settings</i></a>
+                <div class="config-menu" id="config-menu">
+                        <div>
+                                <a class="waves-effect waves-light btn-small" id="start_scroll"><i class="material-icons left">play_arrow</i>Start Scroll</a>
+                            </div>
+                            <div>
+                                <a class="waves-effect waves-light btn-small" id="stop_scroll"><i class="material-icons left">stop</i>Stop Scroll</a>
+                            </div>
+                    <div class="switch" id="switch">
+                        Auto-Scroll<br>
+                        <label>
+                            Off
+                            <input type="checkbox" name='switch'>
+                            <span class="lever"></span>
+                            On
+                        </label>
+                    </div>
+                    <!-- time interval -->
+                    <!-- Dropdown Trigger -->
+                    <div>
+                        <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Fetch Interval</a>
+
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a href="#!">one</a></li>
+                            <li><a href="#!">two</a></li>
+                            <li class="divider" tabindex="-1"></li>
+                            <li><a href="#!">three</a></li>
+                            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                        </ul>
+                    </div>
+                    <!-- scroll interval -->
+                    <!-- Dropdown Trigger -->
+                    <div>
+                        <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Scroll Interval</a>
+
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a href="#!">one</a></li>
+                            <li><a href="#!">two</a></li>
+                            <li class="divider" tabindex="-1"></li>
+                            <li><a href="#!">three</a></li>
+                            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                        </ul>
+                    </div>
+                    <!-- dark mode -->
+                    <div class="switch" id="dark-mode">
+                        Theme<br>
+                        <label>
+                            Light
+                            <input type="checkbox" name='switch'>
+                            <span class="lever"></span>
+                            Dark
+                        </label>
+                    </div>
+                </div>
+            </aside>
             <main>
                 <div class="output col s8 right" id="output"></div>
-                <a class="waves-effect waves-light btn-small" id="btn-small"><i class="material-icons left">arrow_upward</i>Go To Top</a>        
+                <a class="waves-effect waves-light btn-small" id="btn-small"><i class="material-icons left">arrow_upward</i>Go To Top</a>
             </main>
         </div>
     <!-- </div> -->

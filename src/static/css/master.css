@@ -54,7 +54,7 @@
 }
 
 /* Button */
-.btn-small {
+#btn-small {
     position: fixed;
     bottom: 10px;
     right: 50px;
@@ -62,5 +62,24 @@
     cursor: pointer;
 }
 
-/* Media Queries */
-@media only screen and (min-width: 1400px)
+/* Config Menu */
+aside {
+    position: fixed;
+    right: 0;
+    margin: 10px;
+    z-index: 99;
+}
+
+aside .btn-floating {
+    float: right;
+}
+
+aside .config-menu {
+    display: none;
+    clear: both;
+    background: rgba(38, 166, 154, .2);
+    padding: 50px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
