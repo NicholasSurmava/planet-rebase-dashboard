@@ -1,7 +1,59 @@
+/* Main Styles */
+
 * {
     box-sizing: border-box;
 }
 
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 95%;
+}
+
+
+/* Header */
+.side-header {
+    border-right: 2px dashed #eee;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    height: 100%;
+}
+
+.side-header h1 {
+    word-wrap: break-word;
+    text-align: end;
+    font-size: 3em;
+}
+
+.side-header .links a{
+    display: block;
+}
+
+.img-container img {
+    max-height: 600px;
+    max-width: 100%;
+    border: 5px solid #26a69a;
+    left: 0;
+    image-rendering: smooth;
+    border-radius: 8px;
+}
+
+/* Output */
+.output {
+    margin-top: 50vh;
+}
+
+.output .card-panel {
+    margin-right: 100px;
+}
+
+.secondary-content {
+    margin: 10px;
+}
+
+/* Button */
 .btn-small {
     position: fixed;
     bottom: 10px;
@@ -10,41 +62,5 @@
     cursor: pointer;
 }
 
-header {
-    border-right: 2px dashed #eee;
-    position: fixed;
-    width: 240px;
-    height: 100%;
-    padding-right: 30px;
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    text-align: right;
-    top: 0px;
-}
-
-header h1 {
-    word-wrap: break-word;
-    text-align: end;
-    font-size: 3em;
-}
-
-header img {
-    max-width: 100%;
-    height: auto;
-    border: 5px solid black;
-    background: black;
-    position: absolute;
-    left: 0;
-    image-rendering: smooth;
-    border-radius: 8px;
-}
-
-.output {
-    margin-top: 500px;
-}
-
-/* .container {
-    width: 50%;
-} */
+/* Media Queries */
+@media only screen and (min-width: 1400px)

@@ -20,10 +20,16 @@ function fetchProjects() {
             data.forEach(function(project) {
                 output += 
                 `
-                <div class="collection">
-                    <a href="" class="collection-item">Project Name: ${project.project_name}</a>
-                    <a href="" class="collection-item">Author: ${project.name}</a>
-                    <a href="" class="collection-item">Status: ${project.status}</a>
+                <div class="card-panel">
+                    <ul class="collection">
+                        <div><a href="#!" class="secondary-content"><i class="material-icons">history</i></a></div>
+                        <a href="" class="collection-item">Project Name: ${project.project_name}</a>
+                        <li class="collection-item">Author: ${project.name}</li>
+                        <li class="collection-item">Status: ${project.status}</li>
+                        <li class="collection-item">Status Note: ${project.status_note}</li>
+                        <li class="collection-item">Requester: ${project.requester}</li>
+                        <li class="collection-item">Goal: ${project.goal}</li>
+                    </ul>
                 </div>
                 `;
             });
@@ -41,10 +47,11 @@ function fetchProjects() {
         });
 }
 
+// Fetch the projects on page load, then fetch based on the time interval set
 fetchProjects();
 setInterval(fetchProjects, interval);
 
-
+// Scroll the page every 100 miliseconds
 function pageScroll() {
     window.scrollBy(0,1);
     scrolldelay = setTimeout(pageScroll,100);
@@ -52,15 +59,7 @@ function pageScroll() {
 
 pageScroll();
 
-
-// Scroll back to top
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    })
-}
-
+// Scroll back to top click event
 document.getElementById("btn-small").addEventListener('click', topFunction);
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -81,3 +80,5 @@ function topFunction() {
 }
 
 // when the bottom is hit, auto scroll to top after a delay
+
+// When user moves the mouse, stop scrolling
