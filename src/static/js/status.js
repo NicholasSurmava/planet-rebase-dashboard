@@ -3,35 +3,42 @@ const file = 'db/projects/projects.json';
 
 let interval = '5000';
 
-var myHeaders = new Headers();
+const myHeaders = new Headers();
 myHeaders.append('pragma', 'no-cache');
 myHeaders.append('cache-control', 'no-cache');
 
-var myInit = {
+const headerConfig = {
     method: 'GET',
     headers: myHeaders,
 };
 
 function fetchProjects() {
-    fetch(file, myInit)
+    fetch(file, headerConfig)
         .then(res => res.json())
         .then(data => {
             let output = '';
             data.forEach(function(project) {
                 output += 
                 `
-                <div class="card-panel">
-                <span class="card-title"><a href="#!">Project Name: ${project.project_name}</a></span>
-                <a href="#!" class="secondary-content"><i class="material-icons">history</i></a>
-                    <ul class="collection">
-                        <li class="collection-item">Author: ${project.name}</li>
-                        <li class="collection-item">Status: ${project.status}</li>
-                        <li class="collection-item">Status Note: ${project.status_note}</li>
-                        <li class="collection-item">Requester: ${project.requester}</li>
-                        <li class="collection-item">Goal: 
-                            <p>${project.goal}</p>
-                        </li>
-                    </ul>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card">
+                            <div class="card-content black-text">
+                                <span class="card-title">${project.project_name}</span>
+                                <div class="row">
+                                <p class ="col s2 right">Developer: ${project.name}</p>
+                                <p class ="col s2 right">Requester: ${project.requester}</p>
+                                <p class ="col s12">Status: ${project.status}</p>
+                                <p class="col s12">${project.status_note}</p>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <a href="${project.link_main}">Automation Page</a>
+                                <a href="${project.link_dev_doc}">Dev Docs</a>
+                                <a href="${project.link_user_doc}">User Docs</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 `;
             });
@@ -52,12 +59,13 @@ function fetchProjects() {
 // Fetch the projects on page load, then fetch based on the time interval set
 fetchProjects();
 setInterval(fetchProjects, interval);
+start_scroll_down();
 
 // Scroll the page every 100 miliseconds
-function pageScroll() {
+function start_scroll_down() {
     console.log('Start Auto-Scroll');
     window.scrollBy(0,1);
-    scrollDelay = setTimeout(pageScroll,100);
+    scrollDelay = setTimeout(start_scroll_down,100);
 }
 
 function stop_scroll_down() {
@@ -65,7 +73,7 @@ function stop_scroll_down() {
     console.log('Stop Auto-Scroll');
 }
 
-document.getElementById('start_scroll').addEventListener('click', pageScroll);
+document.getElementById('start_scroll').addEventListener('click', start_scroll_down);
 document.getElementById('stop_scroll').addEventListener('click', stop_scroll_down);
 
 
@@ -101,3 +109,5 @@ function revealConfig() {
         menu.style.display = 'none';
     }
 }
+
+// Hide on page click
