@@ -27,7 +27,7 @@
                     <a href="#!">Link 4</a>
                 </div>
                 <div class="img-container">
-                    <img src="https://source.unsplash.com/random/800x600" alt="img">
+                    <img class="materialboxed" src="https://images.unsplash.com/photo-1544965717-185b071dafb6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&h=600&fit=crop&ixid=eyJhcHBfaWQiOjF9" alt="img">
                 </div>
             </header>
             <!-- config menu -->
@@ -43,6 +43,8 @@
                             On
                         </label>
                     </div>
+                    <!-- server status -->
+                    <!-- <div class="status-circle"></div> -->
                     <!-- scroll speed -->
                     <!-- dark mode -->
                     <div class="switch" id="dark-mode">
@@ -65,10 +67,18 @@
             </aside>
             <main>
                 <div class="output col s10 m8 right" id="output"></div>
-                <a class="waves-effect waves-light btn-small" id="btn-small"><i class="material-icons left">arrow_upward</i>Go To Top</a>
+                <a class="btn-floating btn-small halfway-fab waves-effect waves-light teal" id="btn-small"><i class="material-icons left">arrow_upward</i>Go To Top</a>
+                <a class="btn-floating btn-small halfway-fab waves-effect waves-light red" id="add-project"><i class="material-icons">add</i></a>
             </main>
         </div>
     </div>
+
+    <footer>
+        <div class="status-footer">
+            <p>Status: Online</p> 
+        </div>
+
+    </footer>
 
     <script src="static/js/status.js"></script>
     <!--JavaScript at end of body for optimized loading-->

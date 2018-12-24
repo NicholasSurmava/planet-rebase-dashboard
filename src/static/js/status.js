@@ -24,12 +24,21 @@ function fetchProjects() {
                     <div class="col s12">
                         <div class="card">
                             <div class="card-content black-text">
-                                <span class="card-title">${project.project_name}</span>
+                                <div class="card-image right">
+                                    <!-- <img class="materialboxed" src="static/imgs/test-photo.jpg" alt="img"> -->
+                                    <div class="img-ph"></div>
+                                    <span class="card-title">${project.project_name}</span>
+                                    <!-- <div class="card-status">
+                                        <div class="status-circle-small"><p>${project.status}</p></div>
+                                    </div> -->
+                                    <a class="btn-floating btn-1 halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                                    <a class="btn-floating btn-2 halfway-fab waves-effect waves-light blue"><i class="material-icons">history</i></a>
+                                </div>
                                 <div class="row">
-                                <p class ="col s2 right">Developer: ${project.name}</p>
-                                <p class ="col s2 right">Requester: ${project.requester}</p>
-                                <p class ="col s12">Status: ${project.status}</p>
-                                <p class="col s12">${project.status_note}</p>
+                                    <p class="col s2">Status: ${project.status}</p>
+                                    <p class="col s2">Developer: ${project.name}</p>
+                                    <p class="col s2">Requester: ${project.requester}</p>
+                                    <blockquote class="col s12">${project.status_note}</blockquote>
                                 </div>
                             </div>
                             <div class="card-action">

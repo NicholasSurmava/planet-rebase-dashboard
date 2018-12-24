@@ -25,15 +25,16 @@
 }
 
 .img-container {
-    margin-top: 60px;
+    margin-top: 40px;
     margin-left: -100%;
 }
 
-.img-container img {
+.img-container .materialboxed {
     max-height: 600px;
     max-width: 80%;
-    border: 5px solid #26a69a;
-    left: 0;
+    border: 5px solid black;
+    /* left: 0; */
+    display: inline;
     image-rendering: smooth;
     border-radius: 8px;
 }
@@ -47,24 +48,59 @@
     margin-right: 100px;
 }
 
+.output .card-image {
+    width: 50%;
+    height: 50%;
+    /* float: left; */
+}
+
+.output .card-image img {
+    border-radius: 8px;
+}
+
+.output .card-image .card-status {
+    position: absolute;
+    top: -50px;
+    right: -60px;
+    text-align: center;
+}
+
+.output .card-image .img-ph {
+    border-radius: 8px;
+    background: rgba(38, 166, 154, .3);
+    width: 320px;
+    height: 200px;
+    /* visibility: hidden; */
+}
+
+.output .card-image .btn-2 {
+    right: 75px;
+}
+
 .secondary-content {
     margin: 10px;
 }
 
-/* Button */
+/* Buttons */
 #btn-small {
     position: fixed;
     bottom: 10px;
-    right: 50px;
+    right: 70px;
     display: none;
     cursor: pointer;
+}
+
+#add-project {
+    position: fixed;
+    bottom: 10px;
 }
 
 /* Config Menu */
 aside {
     position: fixed;
+    top: 0;
     right: 0;
-    margin: 10px;
+    margin: 10px 24px 0 0;
     z-index: 99;
 }
 
@@ -92,4 +128,39 @@ aside .config-menu .switch .switch-title {
 
 aside .config-menu .switch .lever {
     margin-top: -5px;
+}
+
+/* Footer */
+footer {
+    background: lightslategray;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0 10px 0 10px;
+    max-height: 30px;
+    font-size: .75em;
+    display: none;
+}
+
+.status-circle {
+    width: 100px; 
+    height: 100px; 
+    background: lightsalmon; 
+    border-radius: 50%;
+}
+
+.status-circle-small {
+    width: 60px; 
+    height: 60px; 
+    background: lightsalmon; 
+    border-radius: 50%;
+}
+
+/* Media Queries */
+
+@media (min-width: 2250px) {
+    .container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
 }
