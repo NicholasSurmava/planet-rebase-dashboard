@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.container {
+    max-width: 90%;
+}
+
 /* Header */
 .side-header {
     border-right: 2px dashed #eee;
@@ -12,6 +16,7 @@
     flex-direction: column;
     text-align: right;
     height: 100%;
+    justify-content: center;
 }
 
 .side-header h1 {
@@ -29,12 +34,20 @@
     margin-left: -100%;
 }
 
+<<<<<<< HEAD
 .img-container .materialboxed {
     max-height: 600px;
     max-width: 80%;
     border: 5px solid black;
     /* left: 0; */
     display: inline;
+=======
+.img-container img {
+    max-height: 320px;
+    max-width: 400px;
+    border: 5px solid #26a69a;
+    left: 0;
+>>>>>>> 2f3703b28e75596b4108d5b6439c6bb01c2b1545
     image-rendering: smooth;
     border-radius: 8px;
 }
@@ -100,8 +113,13 @@ aside {
     position: fixed;
     top: 0;
     right: 0;
+<<<<<<< HEAD
     margin: 10px 24px 0 0;
     z-index: 99;
+=======
+    margin: 10px;
+    z-index: 98;
+>>>>>>> 2f3703b28e75596b4108d5b6439c6bb01c2b1545
 }
 
 aside .btn-floating {
